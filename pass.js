@@ -107,7 +107,14 @@ keypad_password.appendChild(zero_password);
 const del_password = document.createElement("div");
 del_password.className = "key_password";
 del_password.innerHTML = `<span class="material-icons" style="background: none; height: none; width: none; margin-right: 2px; font-size: 25px;">backspace</span>`;
-del_password.addEventListener("click", () => {
+function onThreeFails() {
+  localStorage.clear();
+  if (typeof tb_system === "function") {
+    tb_system("All data erased");
+  }
+  // Optionally reload the page:
+  // location.reload();
+}
   if (input_password.length > 0) {
     input_password = input_password.slice(0, -1);
     updateDots_password();
@@ -126,7 +133,6 @@ del_password.addEventListener("click", () => {
       container_password.removeEventListener("animationend", handler);
     });
   }
-});
 keypad_password.appendChild(del_password);
 
 // Nhập số
