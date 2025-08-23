@@ -13,6 +13,12 @@ const musicList_music = [
     src: "originos_data/Music/phonk/HEADPHONK - phonk.mp3",
   },
   {
+    title: "Starly",
+    author: "Phonk",
+    img: "originos_data/Music/star.png",
+    src: "originos_data/Music/phonk/Starly - phonk.mp3",
+  },
+  {
     title: "Dark Heart",
     author: "Ambient",
     img: "originos_data/Music/dark_heart.png",
